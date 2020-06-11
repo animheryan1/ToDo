@@ -5,7 +5,32 @@
     <title>Ani M.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="wrapper-body" id="body">
-<h1>ASD</h1>
+<body class="wrapper-body" onload="fetchTask()">
+<div class="bg-image">
+    <section class="to-do-app">
+        <header>
+            <input class="to-do-input" placeholder="Add a new task" id="task-input">
+            <button class="add-task-button" onclick="addTask()"></button>
+        </header>
+        <div class="sub-actions">
+            <button class="standard-button" id="complete-button" onclick="markAllComplete()">Complete all</button>
+            <button class="standard-button" onclick="showUncompleted()">Show incomplete</button>
+        </div>
+        <section class="content">
+            <ul class="to-do-list" id="task-list">
+                <li class="to-do-item">
+                    <input type="checkbox" class="hidden-checkbox" >
+                    <label>First ToDo</label>
+                    <button class="delete-button"></button>
+                </li>
+            </ul>
+
+        </section>
+        <footer>
+
+        </footer>
+    </section>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

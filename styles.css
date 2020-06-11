@@ -1,0 +1,195 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
+
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+section, div, header, footer, input {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bg-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/back.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+.to-do-app {
+    width: 50%;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.to-do-input {
+    padding: 16px 65px 16px 75px;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    background: #efefef;
+    width: 100%;
+    font-size: 24px;
+    font-family: inherit;
+}
+
+:focus {
+    outline: none;
+}
+
+header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    background-image: url("images/icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.add-task-button {
+    opacity: 0.7;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-image: url("images/plus.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.to-do-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.content {
+    height: calc(100% - 90px);
+    margin: 20px 0;
+    border-top: 1px solid #e6e6e6;
+    overflow-y: auto;
+}
+
+.to-do-item {
+    position: relative;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: background .3s ease;
+}
+
+.hidden-checkbox {
+    text-align: center;
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.to-do-item label {
+    display: block;
+    padding: 15px 15px 15px 60px;
+    line-height: 1.2;
+    background-image: url("images/unchecked.svg");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.to-do-item .hidden-checkbox:checked + label {
+    background-image: url("images/checked.svg");
+    text-decoration: line-through;
+}
+
+.to-do-item:hover {
+    background-color: #f8f8f8;
+}
+
+
+.delete-button {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background-color: inherit;
+    cursor: pointer;
+}
+.to-do-item:hover .delete-button{
+    display: block;
+}
+.delete-button:after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url("images/delete.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sub-actions{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.standard-button{
+    background-color: inherit;
+    position: relative;
+}
+#complete-button{
+    padding-left: 35px;
+}
+#complete-button:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 15px;
+    background-image: url("images/donedone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
