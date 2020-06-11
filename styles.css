@@ -99,7 +99,7 @@ header:before {
 }
 
 .content {
-    height: calc(100% - 90px);
+    height: calc(100% - 100px);
     margin: 20px 0;
     border-top: 1px solid #e6e6e6;
     overflow-y: auto;
@@ -156,9 +156,11 @@ header:before {
     background-color: inherit;
     cursor: pointer;
 }
-.to-do-item:hover .delete-button{
+
+.to-do-item:hover .delete-button {
     display: block;
 }
+
 .delete-button:after {
     content: '';
     width: 40px;
@@ -169,20 +171,23 @@ header:before {
     background-position: center;
 }
 
-.sub-actions{
+.sub-actions {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.standard-button{
+
+.standard-button {
     background-color: inherit;
     position: relative;
 }
-#complete-button{
+
+#complete-button {
     padding-left: 35px;
 }
-#complete-button:before{
+
+#complete-button:before {
     content: "";
     position: absolute;
     left: 0;
